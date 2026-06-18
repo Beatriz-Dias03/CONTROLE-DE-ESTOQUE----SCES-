@@ -21,6 +21,9 @@ def registrar_novo_produto():
     qtd = int(input("Insira a quantidade em estoque: "))
     local = input("Insira a localização no estoque: ")
 
+    produtos.append([id_prod, nome, qtd, local])
+    print("Novo produto inserido com sucesso!\n")
+    
     if id_prod or nome or local == produtos:
       print("Você não pode registrar um produto com informações similares a um produto existente!") 
 
@@ -34,13 +37,13 @@ def produto_ID():
     print("\n---------------------------------------------\n")
     print("\n--- Buscar Produto por ID ---")
     id_procurado = int(input("Digite o ID do produto: "))
-    
+
     for prod in produtos:
         if prod[0] == id_procurado:
             print(f"Produto encontrado: {prod[1]} | Estoque: {prod[2]} | Local: {prod[3]}\n")
             print("\n---------------------------------------------\n")
             return
-            
+
     print("Produto não encontrado no estoque.\n")
     print("\n---------------------------------------------\n")
 
@@ -57,7 +60,7 @@ while True:
     print("1- Adicionar produto | 2- Listar produtos | 3- Buscar por ID | 4- Atualizar Estoque | 5- Sair")
     opção = input("Escolha uma opção: ")
     print("\n---------------------------------------------\n")
-    
+
     if opção == "1":
         registrar_novo_produto()
     elif opção == "2":
@@ -70,4 +73,3 @@ while True:
         print("Interação encerrada.")
         break
     else:
-        print("Opção inválida! Tente novamente.\n")
