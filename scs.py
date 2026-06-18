@@ -21,6 +21,7 @@ def registrar_novo_produto():
     qtd = int(input("Insira a quantidade em estoque: "))
     local = input("Insira a localização no estoque: ")
     
+    # Verifica se o ID já existe na lista de produtos
     id_existe = False
     for prod in produtos:
         if prod[0] == id_prod:
@@ -54,30 +55,14 @@ def novo_estoque():
     
     for prod in produtos:
         if prod[0] == id_procurado:
-            print(f"Produto selecionado: {prod[1]} (Estoque atual: {prod[2]})")
-            print("1 - Entrada (Adicionar) | 2 - Saída (Remover)")
-            operacao = input("Escolha a operação: ")
-            
-            if operacao == "1":
-                quantidade = int(input("Quantidade de entrada: "))
-                prod[2] += quantidade
-                print(f"Entrada realizada! Novo estoque de {prod[1]}: {prod[2]}")
-            elif operacao == "2":
-                quantidade = int(input("Quantidade de saída: "))
-                if quantidade <= prod[2]:
-                    prod[2] -= quantidade
-                    print(f"Saída realizada! Novo estoque de {prod[1]}: {prod[2]}")
-                else:
-                    print("Erro: Quantidade de saída maior do que o estoque disponível!")
-            else:
-                print("Operação inválida!")
-                
+            nova_qtd = int(input(f"Digite a nova quantidade para {prod[1]}: "))
+            prod[2] = nova_qtd
+            print("Quantidade atualizada com sucesso!")
             print("---------------------------------------------\n")
             return
             
     print("Produto não encontrado.")
     print("---------------------------------------------\n")
-
 
 print("Bem vindo ao menu de controle de estoque!\n")
 print("Por favor, selecione uma das opões a seguir para começarmos: \n")
