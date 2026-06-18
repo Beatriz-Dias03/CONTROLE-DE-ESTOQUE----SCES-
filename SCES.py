@@ -23,6 +23,17 @@ def registrar_novo_produto():
     produtos.append([id_prod, nome, qtd, local])
     print("Novo produto inserido com sucesso!\n")
 
+def produto_ID():
+    print("\n--- Buscar Produto por ID ---")
+    id_procurado = int(input("Digite o ID do produto: "))
+    
+    for prod in produtos:
+        if prod[0] == id_procurado:
+            print(f"Produto encontrado: {prod[1]} | Estoque: {prod[2]} | Local: {prod[3]}\n")
+            return
+            
+    print("Produto não encontrado no estoque.\n")
+
 print("---------------------------------------------\n")
 print("Bem vindo ao menu de controle de estoque!\n")
 print("Por favor, selecione uma das opões a seguir para começarmos: \n")
