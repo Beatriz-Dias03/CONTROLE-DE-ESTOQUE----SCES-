@@ -7,6 +7,11 @@ produtos = [
     [4683, "Porca", 620, "Pratileira L-01-60"]
 ]
 
+def status():
+    print("\n------------- STATUS DO ESTOQUE -------------")
+    for prod in produtos:
+        print(f"ID: {prod[0]} | Nome: {prod[1]} | Qtd: {prod[2]} | Local: {prod[3]}")
+    print("---------------------------------------------\n")
 
 print("---------------------------------------------\n")
 print("Bem vindo ao menu de controle de estoque!\n")
