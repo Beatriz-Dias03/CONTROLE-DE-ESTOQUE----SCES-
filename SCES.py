@@ -20,6 +20,9 @@ def registrar_novo_produto():
     qtd = int(input("Insira a quantidade em estoque: "))
     local = input("Insira a localização no estoque: ")
 
+    produtos.append([id_prod, nome, qtd, local])
+    print("Novo produto inserido com sucesso!\n")
+
 print("---------------------------------------------\n")
 print("Bem vindo ao menu de controle de estoque!\n")
 print("Por favor, selecione uma das opões a seguir para começarmos: \n")
