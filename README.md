@@ -1,5 +1,5 @@
 ## Oioi professor(es) 👋
-<! --
+
 Esse é um repositório ✨ _especial_ ✨ porque é a ultima atividade antes das férias!
 Vocês devem estar se perguntando..:
 
