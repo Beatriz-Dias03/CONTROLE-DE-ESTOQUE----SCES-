@@ -14,25 +14,41 @@ def status():
     print("---------------------------------------------\n")
 
 def registrar_novo_produto():
+    print("\n---------------------------------------------\n")
     print("\n--- Registrar Novo Produto ---")
     id_prod = int(input("Insira o ID do produto (numérico): "))
     nome = input("Insira o nome do produto: ")
     qtd = int(input("Insira a quantidade em estoque: "))
     local = input("Insira a localização no estoque: ")
 
-    produtos.append([id_prod, nome, qtd, local])
-    print("Novo produto inserido com sucesso!\n")
+    if id_prod or nome or local == produtos:
+      print("Você não pode registrar um produto com informações similares a um produto existente!") 
+
+    else:   
+        produtos.append([id_prod, nome, qtd, local])
+        print("Novo produto inserido com sucesso!\n")
+    
+    print("\n---------------------------------------------\n")
 
 def produto_ID():
+    print("\n---------------------------------------------\n")
     print("\n--- Buscar Produto por ID ---")
     id_procurado = int(input("Digite o ID do produto: "))
     
     for prod in produtos:
         if prod[0] == id_procurado:
             print(f"Produto encontrado: {prod[1]} | Estoque: {prod[2]} | Local: {prod[3]}\n")
+            print("\n---------------------------------------------\n")
             return
             
     print("Produto não encontrado no estoque.\n")
+    print("\n---------------------------------------------\n")
+
+def novo_estoque():
+   print("\n---------------------------------------------\n")
+
+   print("Certo! a quantidade de um produto será mudada!\n")
+   ("Primeiro, me informe qual produto você gostaria de mudar por seu ID")
 
 print("---------------------------------------------\n")
 print("Bem vindo ao menu de controle de estoque!\n")
