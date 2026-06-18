@@ -13,6 +13,13 @@ def status():
         print(f"ID: {prod[0]} | Nome: {prod[1]} | Qtd: {prod[2]} | Local: {prod[3]}")
     print("---------------------------------------------\n")
 
+def registrar_novo_produto():
+    print("\n--- Registrar Novo Produto ---")
+    id_prod = int(input("Insira o ID do produto (numérico): "))
+    nome = input("Insira o nome do produto: ")
+    qtd = int(input("Insira a quantidade em estoque: "))
+    local = input("Insira a localização no estoque: ")
+
 print("---------------------------------------------\n")
 print("Bem vindo ao menu de controle de estoque!\n")
 print("Por favor, selecione uma das opões a seguir para começarmos: \n")
