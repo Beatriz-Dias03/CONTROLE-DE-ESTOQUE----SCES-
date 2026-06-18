@@ -14,4 +14,4 @@ R: Ao iniciar o programa, um menu aparecerá e informará ao usuário para escol
 
 Agora que já estão cientes do básico, aproveitem o código! Qualquer erro pode  ser informado a criadora para melhor aprendizado e analise.
 
-Agradeciementos, Beatriz B. Dias.
+Agradecimentos, Beatriz B. Dias.
